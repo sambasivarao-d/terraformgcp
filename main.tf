@@ -26,10 +26,6 @@ resource "google_cloud_run_service" "test" {
       }
       }
       }
-    backend "gcs" {
-      bucket  = "santhoshstate"
-      prefix  = "terraform/state"
- }
 
 
 
