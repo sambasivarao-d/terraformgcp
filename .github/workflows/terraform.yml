@@ -91,7 +91,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan -lock=false
       #env:
         #GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
