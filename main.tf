@@ -10,10 +10,10 @@ resource "google_cloud_run_service" "test" {
  }
 }
 
-    template {
-      spec {
-        containers {
-            image = "us-docker.pkg.dev/cloudrun/container/hello"
-        }
+template {
+  spec {
+    containers {
+      image = "us-docker.pkg.dev/cloudrun/container/hello"
       }
-    }
+      }
+      }
