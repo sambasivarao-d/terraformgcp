@@ -61,17 +61,17 @@ jobs:
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
-      shell: bash
+        shell: bash
 
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
 
-      name: Auth GCP Service Account
-        uses: google-github-actions/auth@v0
-        with:
-          credentials_json: ${{ secrets.GCP_CREDENTIALS}}
+    - name: Auth GCP Service Account
+      uses: google-github-actions/auth@v0
+      with:
+        credentials_json: ${{ secrets.GCP_CREDENTIALS}}
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
