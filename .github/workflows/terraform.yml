@@ -61,8 +61,7 @@ jobs:
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
-        shell: /usr/bin/bash --noprofile --norc -e -o pipefail ***0***
-
+        shell: bash
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
