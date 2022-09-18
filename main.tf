@@ -16,7 +16,7 @@ provider "google" {
 
 
 resource "google_cloud_run_service" "test" {
-  name = "cloud-run"
+  name = "cloud-run1"
     location = "asia-southeast1"
     #project = "terraform-practice2"
     template {
