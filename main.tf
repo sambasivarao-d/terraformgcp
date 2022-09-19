@@ -14,19 +14,31 @@ provider "google" {
   zone = "us-central1-a"
 }
 
+resource "google_bigquery_dataset" "dataset" {
+    dataset_id = "mydata8"
+  
+}
 
-resource "google_cloud_run_service" "test" {
-  name = "cloud-run1"
-    location = "asia-southeast1"
-    #project = "terraform-practice2"
-    template {
-      spec {
-        containers {
-          image = "us-docker.pkg.dev/cloudrun/container/hello"
-      }
-      }
-      }
+resource "google_bigquery_table" "table" {
+    table_id = "testtable"
+    dataset_id = google_bigquery_dataset.dataset.dataset_id
+    schema =  <<EOF
+[
+  {
+    "name": "permalink",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The Permalink"
+  },
+  {
+    "name": "state",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "State where the head office is located"
+  }
+]
+EOF
 
 
-
-      }
+  
+}
