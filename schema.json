@@ -1,0 +1,170 @@
+[
+    {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "creationTime",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "modificationTime",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "warehouseId",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "currentWarehouseCode",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "warehouseType",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "warehouseDescription",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "geographicalCountry",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "code",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "location",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "unlocode",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "comment",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "guiDescription",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "activeStartDate",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "activeEndDate",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "isTransit",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "address",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "state",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "streetAddress",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "postalAddress",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "zipCode",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "warehouseOpeningDays",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "openOnMonday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnTuesday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnWednesday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnThursday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnFriday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnSaturday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "openOnSunday",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            }
+        ]
+    }
+]
