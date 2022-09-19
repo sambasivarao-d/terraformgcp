@@ -46,8 +46,7 @@ name: 'Terraform'
 
 on:
   push:
-    paths:
-      - 'Bigquery/**'
+    branches: [main]
   pull_request:
 
 permissions:
