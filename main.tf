@@ -22,8 +22,5 @@ resource "google_bigquery_dataset" "dataset" {
 resource "google_bigquery_table" "table" {
     table_id = "testtable"
     dataset_id = google_bigquery_dataset.dataset.dataset_id
-    schema =  "schema.json"
-
-
-  
-}
+    schema =  "query.json"
+    }
