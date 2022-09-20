@@ -15,7 +15,7 @@ provider "google" {
 }
 
 resource "google_bigquery_dataset" "dataset" {
-    dataset_id = "mydata1"
+    dataset_id = "mydata2"
   
 }
 
