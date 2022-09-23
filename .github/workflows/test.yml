@@ -45,7 +45,7 @@
 name: 'Terraform'
 
 on:
-  push:
+ # push:
     branches: [ "ldwhm" ]
   pull_request:
 
