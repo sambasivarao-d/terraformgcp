@@ -15,7 +15,7 @@ module "archivebuckets" {
     storage_class  = var.storage_class
 }
 
-module "punsubnotification-with-GCS" {
+module "pubsubnotification-with-GCS" {
     source = ".//PubsubNotification-withGCS"
     landingbucket     = var.landingbucket
     location = var.location
