@@ -77,6 +77,22 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       #env:
         #GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS}}
+        
+    - name: Setup Terraform Backend
+      id: backend
+      run: |
+        cat > backend.tf << EOF
+        terraform {
+          backend "remote" {
+            organization = "${secrets.GCP_CREDENTIALS}"
+
+            workspaces {
+              name = "${secrets.GCP_CREDENTIALS}"
+            }
+          }
+        }
+        EOF
+ 
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
