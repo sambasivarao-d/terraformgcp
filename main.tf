@@ -8,7 +8,7 @@ module "ServiceAccount" {
   
 }
 
-module "archivebucket" {
+module "archivebuckets" {
     source = ".//ArchiveBucket"
     bucket = var.bucket
     location = var.location
