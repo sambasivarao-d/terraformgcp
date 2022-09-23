@@ -46,7 +46,8 @@ name: 'Terraform'
 
 on:
   push:
-    - branches: [ldwhm]
+    - branches: 
+      - ldwhm
     paths:
       - sourcedataproduct-sapbw-stockonline/**
   pull_request:
