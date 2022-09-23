@@ -1,3 +1,11 @@
+terraform {
+ backend "gcs" {
+   bucket  = "santhoshstate"
+   prefix  = "terraform/state6"
+ }
+}
+
+
 module "ServiceAccount" {
     source = "../infra/ops_resources"
     serviceaccount = var.serviceaccount
