@@ -8,7 +8,7 @@ module "ServiceAccount" {
   
 }
 
-module "pubsubnotifications-with-GCS" {
+module "pubsubnotification-with-GCS" {
     source = "../infra/caching"
     landingbucket     = var.landingbucket
     storage_class = var.storage_class
