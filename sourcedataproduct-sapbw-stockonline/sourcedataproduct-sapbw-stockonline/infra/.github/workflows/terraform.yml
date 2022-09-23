@@ -47,7 +47,7 @@ name: 'Terraform'
 on:
   push:
     paths:
-      - 'sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra/**'
+      - '../sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra'
     branches: [ldwhm]
   pull_request:
 
@@ -85,7 +85,7 @@ jobs:
     - name: Terraform Init
       run: terraform init
       env:
-        working-directory: ./sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra
+        working-directory: "../sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra"
         #GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS}}
 
     # Checks that all Terraform configuration files adhere to a canonical format
@@ -96,7 +96,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -lock=false
       env:
-        working-directory: ./sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra
+        working-directory: "../sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra"
         #GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
@@ -104,5 +104,5 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -lock=false -auto-approve
       env:
-        working-directory: ./sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra
+        working-directory: "../sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra"
         #GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
