@@ -65,6 +65,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: "./sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra/"
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
