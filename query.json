@@ -1,0 +1,122 @@
+[
+    {
+      "name": "WM_LGNUM",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "PLANT",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZCORPBRND",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZPM_TYPE",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "WM_EXTRDAT",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZPROD_ID",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZARTCL_ID",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "RT_SIZCR",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZSEASON",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_UNR",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_BLO",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_QI",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_RET",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_SCR",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZQTY_CHA",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "WM_QUAN",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZTOTVAL",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    },
+    {
+      "name": "ZUNRVAL",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZZSKURANK",
+      "mode": "NULLABLE",
+      "type": "FLOAT",
+      "fields": []
+    },
+    {
+      "name": "ZPTDETIND",
+      "mode": "NULLABLE",
+      "type": "STRING",
+      "fields": []
+    }
+  ]
