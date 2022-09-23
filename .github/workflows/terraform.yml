@@ -73,6 +73,8 @@ jobs:
       uses: google-github-actions/auth@v0
       with:
         credentials_json: ${{ secrets.GCP_CREDENTIALS}}
+      env:
+        working-directory: ./sourcedataproduct-sapbw-stockonline/sourcedataproduct-sapbw-stockonline/infra
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
