@@ -14,10 +14,3 @@ provider "google" {
   zone = "us-central1-a"
   credentials = "keys.json"
 }
-
-terraform {
- backend "gcs" {
-   bucket  = "santhoshstate"
-   prefix  = "terraform/state6"
- }
-}
