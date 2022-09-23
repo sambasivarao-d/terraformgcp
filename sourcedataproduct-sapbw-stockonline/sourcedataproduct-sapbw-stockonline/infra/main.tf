@@ -1,9 +1,3 @@
-terraform {
- backend "gcs" {
-   bucket  = "santhoshstate"
-   prefix  = "terraform/state6"
- }
-}
 
 
 module "ServiceAccount" {
