@@ -1,7 +1,7 @@
 terraform {
  backend "gcs" {
    bucket  = "santhoshstate"
-   prefix  = "terraform/state7"
+   prefix  = "terraform/state8"
    credentials = "keys.json"
  }
 }
