@@ -21,7 +21,7 @@ module "pubsubnotification-with-GCS" {
 
 }
 
-module "Bigquerys" {
+module "Bigquery" {
     source = "../infra/data_product"
     region = var.region
     project = var.project
