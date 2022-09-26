@@ -45,8 +45,8 @@
 name: 'Terraform'
 
 on:
-  push:
-    branches: [ "ldwhm" ]
+  workflow_dispatch:
+    #branches: [ "ldwhm" ]
   pull_request:
 
 permissions:
