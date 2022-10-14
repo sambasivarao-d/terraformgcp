@@ -67,15 +67,16 @@ on:
     #branches: [ "ldwhm" ]
   pull_request:
 
-permissions:
-  contents: 'read'
-  id-token: 'write'
+
 
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: 'read'
+      id-token: 'write'
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
