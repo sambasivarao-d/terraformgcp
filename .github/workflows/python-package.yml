@@ -62,7 +62,7 @@ jobs:
         python -m pip install apache_beam[gcp]
         pip install google-apitools
         sudo apt-get update
-        snap install google-cloud-cli
+        sudo snap install google-cloud-cli
         gcloud auth application-default login
         
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
