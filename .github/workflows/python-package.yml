@@ -56,7 +56,7 @@ jobs:
       with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
     - run: |
-          gcloud auth application-default login
+          gcloud auth application-default login -y
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
