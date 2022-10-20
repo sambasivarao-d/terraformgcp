@@ -55,6 +55,8 @@ jobs:
       uses: google-github-actions/setup-gcloud@v0.2.1
       with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
+    - run: |
+          gcloud auth application-default login
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
