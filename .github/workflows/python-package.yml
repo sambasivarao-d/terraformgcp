@@ -42,20 +42,17 @@ jobs:
        # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
-    #- name: Authenticate to Google Cloud
-      #id: auth
-      #uses: google-github-actions/auth@v0
-      #with:
-        #workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
-        #service_account: ${{ secrets.SERVICE_ACCOUNT }}
-        #export_default_credentials: true
-    - name: Setup GCloud
+    - name: Authenticate to Google Cloud
       id: auth
-      uses: google-github-actions/setup-gcloud@v0.2.1
+      uses: google-github-actions/auth@v0
       with:
-        project_id: ${{ secrets.GCP_PROJECT_ID }}
         workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.SERVICE_ACCOUNT }}
+        export_default_credentials: true
+    - name: Setup GCloud
+    - uses: google-github-actions/setup-gcloud@v0.2.1
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
@@ -81,6 +78,8 @@ jobs:
         #pytest
     - name : creating template
       run: |
-        python main.py --runner DataflowRunner --temp_location gs://satesttemp/tempdata --template_location gs://satesttemplate/templates/df-cust-template-gcs-bq-parquet --region europe-west1 --subnetwork projects/terraform-practice2/regions/europe-west1/subnetworks/tf-stockbalanceonline-subnet --staging_location gs://sateststagging/staging --project terraform-practice2  --setup_file './setup.py' --worker_machine_type 'n1-standard-4' --max_num_workers 5 --num_workers 1
+        python get_oauth2_token.py --noauth_local_webserver
+        python main.py --runner DataflowRunner --temp_location gs://satesttemp/tempdata --template_location gs://satesttemplate/templates/df-cust-template-gcs-bq-parquet --region europe-west1 --subnetwork projects/terraform-practice2/regions/europe-west1/subnetworks/tf-stockbalanceonline-subnet --staging_location gs://sateststagging/staging --project terraform-practice2  --setup_file './setup.py' --worker_machine_type 'n1-standard-4' --max_num_workers 5 --num_workers 1 --noauth_local_webserver
       working-directory: ./cloud_dataflow
+    
 
