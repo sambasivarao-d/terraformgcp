@@ -48,8 +48,8 @@ jobs:
       with:
         workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.SERVICE_ACCOUNT }}
-        token_format: 'access_token'
-        access_token_lifetime: 300s
+        #token_format: 'access_token'
+        #access_token_lifetime: 300s
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
