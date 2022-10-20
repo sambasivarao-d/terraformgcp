@@ -28,10 +28,15 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
     strategy:
       fail-fast: false
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
+        
+    permissions:
+      contents: 'read'
+      id-token: 'write
 
     steps:
        # Checkout the repository to the GitHub Actions runner
