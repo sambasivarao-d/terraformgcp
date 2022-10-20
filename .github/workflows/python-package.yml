@@ -47,16 +47,17 @@ jobs:
       uses: google-github-actions/auth@v0
       with:
          #credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
+        create_credentials_file: true
         workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.SERVICE_ACCOUNT }}
         token_format: 'access_token'
         access_token_lifetime: 300s
-    - name: Setup GCloud
-      uses: google-github-actions/setup-gcloud@v0.2.1
-      with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-    - run: |
-          gcloud auth application-default login --quiet
+   # - name: Setup GCloud
+   #   uses: google-github-actions/setup-gcloud@v0.2.1
+   #   with:
+    #      project_id: ${{ secrets.GCP_PROJECT_ID }}
+   # - run: |
+   #       gcloud auth application-default login --quiet
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
