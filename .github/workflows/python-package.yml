@@ -61,7 +61,8 @@ jobs:
         python -m pip install flake8 pytest
         python -m pip install apache_beam[gcp]
         pip install google-apitools
-        sudo apt-get update && sudo apt-get install google-cloud-cli
+        sudo apt-get update
+        sudo snap install google-cloud-cli
         gcloud auth application-default login
         
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
