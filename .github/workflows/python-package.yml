@@ -25,13 +25,12 @@ on:
 
 jobs:
   build:
-    name: python
+    name: 'python'
     runs-on: ubuntu-latest
     environment: production
     permissions:
       contents: 'read'
       id-token: 'write'
-    
     strategy:
       fail-fast: false
       matrix:
