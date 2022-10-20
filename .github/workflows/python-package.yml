@@ -49,11 +49,7 @@ jobs:
         workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER_ID }}
         service_account: ${{ secrets.SERVICE_ACCOUNT }}
         token_format: 'access_token'
-        access_token_lifetime: 300s
-    - name: 'Set up Cloud SDK'
-      uses: 'google-github-actions/setup-gcloud@v0'
-    - name: 'Use gcloud CLI'
-      run: 'gcloud info'
+        access_token_lifetime: 3000s
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
