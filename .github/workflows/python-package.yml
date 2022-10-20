@@ -50,6 +50,10 @@ jobs:
         service_account: ${{ secrets.SERVICE_ACCOUNT }}
         token_format: 'access_token'
         access_token_lifetime: 3000s
+    - id: 'access-secret'
+      run: |-
+        curl https://secretmanager.googleapis.com/v1/projects/my-project/secrets/my-secret/versions/1:access \
+          --header "Authorization: Bearer ${{ steps.auth.outputs.access_token }}"
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
@@ -77,3 +81,4 @@ jobs:
       run: |
         python main.py --runner DataflowRunner --temp_location gs://satesttemp/tempdata --template_location gs://satesttemplate/templates/df-cust-template-gcs-bq-parquet --region europe-west1 --subnetwork projects/terraform-practice2/regions/europe-west1/subnetworks/tf-stockbalanceonline-subnet --staging_location gs://sateststagging/staging --project terraform-practice2  --setup_file './setup.py' --worker_machine_type 'n1-standard-4' --max_num_workers 5 --num_workers 1
       working-directory: ./cloud_dataflow
+
