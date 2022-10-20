@@ -26,6 +26,7 @@ on:
 
 jobs:
   build:
+    name: python
     runs-on: ubuntu-latest
     environment: production
     permissions:
